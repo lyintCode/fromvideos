@@ -1,1 +1,53 @@
+# Генерация ssh ключа
+ssh-keygen -t rsa
 
+# Команды git
+git init
+git config --global init.defaultBranch main
+git checkout -b main
+git remote add origin git@gitlab.com:username/repository.git
+git remote -v
+git pull origin main
+
+# Установка venv и pip
+sudo apt update
+sudo apt install python3-venv python3-pip
+
+# Создание виртуального окружения
+python3 -m venv .venv
+
+# Активация виртуального окружения
+. ./.venv/bin/activate
+
+# Обновление pip
+pip install --upgrade pip
+
+# Установка django
+pip install django
+
+# Посмотреть установленные пакеты pip
+pip freeze
+
+# Установка зависимостей проекта через файл requirements.txt
+pip install -r requirements.txt
+
+# Создание проекта django
+django-admin starproject <название проекта>
+
+# Деактивация виртуального окружения
+deactivate
+
+# Создание приложения django
+python manage.py startapp main
+
+# Путь до файлов wsl
+\\wsl$\Debian\home\user\
+
+# Изменения файла settings.py
+import os
+import sys
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
+
+# Запуск сервера django
+./manage.py runserver
