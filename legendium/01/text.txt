@@ -1,1 +1,37 @@
+# Установка wsl в powershell от администратора
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 
+# Ссылка на скачивание ядра wsl
+https://aka.ms/wsl2kernel
+
+# Устанавливаем версию wsl 2 по умолчанию
+wsl --set-default-version 2
+
+# перейти в папку пользователя win+r
+%USERPROFILE%
+
+# Содержимое файла .wslconfig
+memory=8GB  # Ограничить использование памяти до 4 ГБ
+processors=4  # Ограничить использование до 2 ядер процессора
+localhostForwarding=true  # Включить перенаправление на localhost
+
+# Выключение wsl
+wsl --shutdown
+
+# Установка zsh
+sudo apt update
+sudo apt install zsh
+
+# Устанавливка oh-my-zsh
+# Сайт: ohmyz.sh/#install
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Ссылка на темы oh my zsh
+https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+
+# Редактирование файла настроек zsh при помощи nano (находится в папке пользователя)
+nano ./.zshrc
+
+# Применение настроек zsh (что бы не перезапускать оболочку)
+. ./.zshrc
