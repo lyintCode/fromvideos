@@ -1,0 +1,25 @@
+# Python
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/__pycache__/
+static_root/
+
+# Django
+**/*.log
+*.db
+*.sqlite3
+*.env
+db_dump.json
+
+# Keys
+**/*.pem
+
+# Virtual Environments
+.venv/
+
+# Editor files
+**/.vscode/
+
+# Other
+.git/
