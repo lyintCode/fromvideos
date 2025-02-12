@@ -1,1 +1,5 @@
+# Установка python-dotenv
+pip install python-dotenv
 
+# Установка django-debug-toolbar
+pip install django-debug-toolbar
