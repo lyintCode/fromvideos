@@ -3,3 +3,6 @@ pip install python-dotenv
 
 # Установка django-debug-toolbar
 pip install django-debug-toolbar
+
+# Запуск в prod среде по умолчанию в файлах manage.py и wsgi.py
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'legendium.settings.prod')
